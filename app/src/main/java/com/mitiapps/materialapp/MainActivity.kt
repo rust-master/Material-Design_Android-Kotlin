@@ -1,7 +1,6 @@
 package com.mitiapps.materialapp
 
-
-import android.R
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mitiapps.materialapp.databinding.ActivityMainBinding
@@ -17,16 +16,12 @@ class MainActivity : AppCompatActivity()  {
         setContentView(binding.root)
 
         binding.nextButton.setOnClickListener {
-//            openFragment()
+            val intent = Intent(applicationContext,ProductGridActivity::class.java)
+            startActivity(intent)
         }
     }
 
-//    private fun openFragment() {
-//        supportFragmentManager.beginTransaction()
-//            .add(R.id.fragment_container, ProductGridFragment())
-//            .addToBackStack(null)
-//            .commit()
-//    }
+
 
 
 }
